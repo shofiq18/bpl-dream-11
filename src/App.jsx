@@ -1,10 +1,26 @@
-
+import Header from "./component/Header";
+import Banner from "./component/Banner";
+import AvailablePlayers from "./component/AvailablePlayers";
 
 const App = () => {
   return (
-    <div>
- 
-      <p>assignment --7 for react</p>
+    <div className="">
+
+
+      {/* Header  */}
+      <Header></Header>
+
+
+
+      {/* Banner */}
+      <Banner></Banner>
+
+
+
+      {/* Available Players */}
+      <AvailablePlayers></AvailablePlayers>
+       
+
     </div>
   );
 };
