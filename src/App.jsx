@@ -3,7 +3,7 @@
 const App = () => {
   return (
     <div>
-          <h1>heloo react</h1>
+      <h1>Dream 11</h1>
     </div>
   );
 };
