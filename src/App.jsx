@@ -1,6 +1,7 @@
 import Header from "./component/Header";
 import Banner from "./component/Banner";
 import AvailablePlayers from "./component/AvailablePlayers";
+import Footer from "./component/Footer";
 
 const App = () => {
   return (
@@ -19,6 +20,9 @@ const App = () => {
 
       {/* Available Players */}
       <AvailablePlayers></AvailablePlayers>
+
+      {/* Footer  */}
+      <Footer></Footer>
        
 
     </div>

@@ -1,31 +1,21 @@
-
+import Bg from '../../public/image/assets/bg-shadow.png'
+import Cricket from '../../public/image/assets/banner-main.png'
 
 const Banner = () => {
     return (
-       
-
-        
-          
-            <div className="relative flex flex-col justify-center items-center h-96 text-white rounded-xl p-8 bg-cover bg-center"
-                 style={{ backgroundImage: 'url(/path-to-your-bg-shadow-image)' }}>
-              <div className="text-center">
-                <img
-                  src="/path-to-your-logo-image" // Replace with actual path
-                  alt="Cricket Logo"
-                  className="w-24 mb-6 mx-auto"
-                />
-                <h1 className="text-3xl font-bold mb-4">Assemble Your Ultimate Dream 11 Cricket Team</h1>
-                <p className="text-lg mb-8">Beyond Boundaries Beyond Limits</p>
-                <button className="bg-yellow-300 text-black py-3 px-6 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
-                  Claim Free Credit
-                </button>
-              </div>
+        <div className=' relative max-w-7xl mx-auto mt-6   text-white bg-cover'>
+            <div >
+                <img className='bg-gradient-to-r from-gray-900 via-gray-800 to-gray-800 rounded-3xl bg-cover' src={Bg} alt="" />
             </div>
-          );
-        };
-        
-      
-        
-    
+            <div className='text-center absolute top-16 bottom-16 left-44 right-44'>
+                <img src={Cricket} alt="" className='mb-6 mx-auto '  />
+                <h2 className=' text-4xl font-bold mb-4 '>Assemble Your Ultimate Dream 11 Cricket Team</h2>
+                <p className='text-2xl font-medium text-gray-400 mb-6 '>Beyond Boundaries Beyond Limits</p>
+                <button className="btn bg-[#E7FE29]">Claim Free Credit</button>
+
+            </div>
+        </div>
+    );
+};
 
 export default Banner;
