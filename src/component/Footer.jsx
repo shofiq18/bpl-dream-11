@@ -1,48 +1,65 @@
-
+import logo from '../../public/image/assets/logo-footer.png'
 
 const Footer = () => {
     return (
-        <div className=" bg-[#06091A] mt-6">
-            <footer className="footer max-w-7xl mx-auto text-gray-500  p-10">
-  <nav>
-    <h6 className="footer-title">Services</h6>
-    <a className="link link-hover">Branding</a>
-    <a className="link link-hover">Design</a>
-    <a className="link link-hover">Marketing</a>
-    <a className="link link-hover">Advertisement</a>
-  </nav>
-  <nav>
-    <h6 className="footer-title">Company</h6>
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
-  </nav>
-  <nav>
-    <h6 className="footer-title">Legal</h6>
-    <a className="link link-hover">Terms of use</a>
-    <a className="link link-hover">Privacy policy</a>
-    <a className="link link-hover">Cookie policy</a>
-  </nav>
-  <form>
-    <h6 className="footer-title">Newsletter</h6>
-    <fieldset className="form-control w-80">
-      <label className="label">
-        <span className="label-text">Enter your email address</span>
-      </label>
-      <div className="join">
-        <input
-          type="text"
-          placeholder="username@site.com"
-          className="input input-bordered join-item" />
-        <button className="btn btn-primary join-item">Subscribe</button>
-      </div>
-    </fieldset>
-  </form>
-</footer>
+        
+
+        <div className=" mt-96 relative bg-[#06091A] pt-60">
+                <div className='max-w-7xl mx-auto flex justify-center'>
+                    <img src={logo} alt="" />
+                </div>
+            <footer className="footer md:flex justify-between max-w-7xl mx-auto text-base text-gray-500 py-16">
+
+                {/* Newsletter */}
+
+            <div className='absolute  justify-center text-center  -top-44 left-0 right-0 mx-auto bg-gradient-to-r from-blue-200 to-yellow-200  rounded-lg py-20 shadow-lg max-w-7xl'>
+                <h2 className='font-bold text-black text-3xl mb-4 text-center'>Subscribe to our Newsletter</h2>
+                <h4 className='font-medium text-lg text-gray-500 text-center mb-6'>Get the latest updates and news right in your inbox!</h4>
+                <div>
+                <input type="email" placeholder='Enter your email' className='pr-36 pl-4 py-3 bg-gray-100  rounded-lg mr-4' />
+                <button className="btn bg-[#E7FE29]">Claim Free Credit</button>
+                </div>
+            </div>
+                
+                {/* footer */}
+                <nav>
+                    <h6 className="footer text-lg font-semibold  text-white">About Us</h6>
+                    <p>We are a passionate team <br /> dedicated to providing the best <br /> services to our customers.</p>
+                 </nav>
+                <nav>
+                    <h6 className="footer text-lg font-semibold  text-white">Quick Links</h6>
+                    <a className="link link-hover">Home</a>
+                    <a className="link link-hover">Services</a>
+                    <a className="link link-hover">About</a>
+                    <a className="link link-hover"> Contact</a>
+                </nav>
+
+                <form>
+                        <h6 className="footer text-lg font-semibold  text-white">Subscribe</h6>
+                        <p className="mb-3">Subscribe to our newsletter for the <br /> latest updates.</p>
+                    <fieldset className="form-control w-80">
+                        <div className="join">
+                             <input
+                             type="text"
+                             placeholder="Enter your email"
+                            className="input input-bordered join-item" />
+                            <button className="btn btn-primary join-item">Subscribe</button>
+                        </div>
+                     </fieldset>
+                </form>
+            </footer>  
+            <div className='border border-gray-900 mb-4'></div>
+            <div className="text-center pb-8 pt-4 text-sm text-gray-500">
+                <p>©2024 Your Company All Rights Reserved.</p>
+            </div>
             
-            
+
+
         </div>
+            
+
+        
+        
     );
 };
 
