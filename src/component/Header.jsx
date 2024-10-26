@@ -3,7 +3,7 @@
 import logo from '../../public/image/assets/logo.png'
 
 
-const Header = () => {
+const Header = ({freeCredit}) => {
     return (
     <div className='max-w-7xl mx-auto mt-12'>
         <div className="navbar bg-base-100">
@@ -46,7 +46,7 @@ const Header = () => {
        
     </ul>
   </div>
-    <a className="btn">0 Coin </a>
+    <a className="btn">{freeCredit} Coin <span><i className="fa-solid fa-circle-dollar-to-slot text-yellow-500"></i></span> </a>
   </div>
 </div>
     

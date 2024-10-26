@@ -1,7 +1,10 @@
 import Bg from '../../public/image/assets/bg-shadow.png'
 import Cricket from '../../public/image/assets/banner-main.png'
 
-const Banner = () => {
+
+
+
+const Banner = ({handleFreeCredit}) => {
     return (
         <div className=' relative max-w-7xl mx-auto mt-6   text-white bg-cover'>
             <div >
@@ -11,7 +14,7 @@ const Banner = () => {
                 <img src={Cricket} alt="" className='mb-6 mx-auto '  />
                 <h2 className=' text-4xl font-bold mb-4 '>Assemble Your Ultimate Dream 11 Cricket Team</h2>
                 <p className='text-2xl font-medium text-gray-400 mb-6 '>Beyond Boundaries Beyond Limits</p>
-                <button className="btn bg-[#E7FE29]">Claim Free Credit</button>
+                <button onClick={() => handleFreeCredit(2000000)} className="btn bg-[#E7FE29]">Claim Free Credit </button>
 
             </div>
         </div>
