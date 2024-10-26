@@ -13,11 +13,12 @@ const AvailablePlayers = () => {
         
     }, []);
     console.log(players);
+  
    
         
     
     return (
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3  mt-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3  mt-8">
             
             {
                 players.map(player => (
