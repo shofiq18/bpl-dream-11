@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Selected from "./Selected";
 
 
+// eslint-disable-next-line react/prop-types
 const AvailablePlayers = ({handleSelectedPlayer, selectedPlayer, handleDelete}) => {
     const [players, setPlayers] = useState([]);
     const [activeTab, setActiveTab] = useState(0);
@@ -24,13 +25,13 @@ const AvailablePlayers = ({handleSelectedPlayer, selectedPlayer, handleDelete}) 
                 <h2 className='text-2xl font-bold'>{activeTab === 0 ? 'Available Players' : `Selected Players (${selectedPlayer.length}/6)`}</h2>
                 <div className="flex gap-3">
                     <button
-                    className={`px-4 py-2 rounded ${activeTab === 0 ? 'bg-[#E7FE29] text-black' : 'button'}`}
+                    className={`px-4 py-2 rounded-xl border-2 ${activeTab === 0 ? 'bg-[#E7FE29] text-black' : 'button'}`}
                     onClick={() => setActiveTab(0)}
                     >
                         Available
                     </button>
                     <button
-                    className={`px-4 py-2 rounded ${activeTab === 1 ? 'bg-[#E7FE29] text-black' : 'button'}`}
+                    className={`px-4 py-2 rounded-xl border-2 ${activeTab === 1 ? 'bg-[#E7FE29] text-black' : 'button'}`}
                     onClick={() => setActiveTab(1)}
                     >
                     Selected ({selectedPlayer.length})

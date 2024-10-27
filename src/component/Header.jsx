@@ -3,6 +3,7 @@
 import logo from '../../public/image/assets/logo.png'
 
 
+// eslint-disable-next-line react/prop-types
 const Header = ({freeCredit}) => {
     return (
     <div className='max-w-7xl mx-auto mt-12'>

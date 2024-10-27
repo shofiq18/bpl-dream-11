@@ -5,8 +5,9 @@ import Footer from "./component/Footer";
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Selected from "./component/Selected";
 
+
+// eslint-disable-next-line react/prop-types
 const App = ({setActiveTab}) => {
   const [isActive, setIsActive] = useState({
     available: true,
@@ -53,7 +54,7 @@ const handleSelectedPlayer = (player) => {
   
 
   if (freeCredit < player.biddingPrice) {
-    toast.warn('No available balance', {
+    toast.warn('No available coin', {
         position: "top-center",
         theme: "dark"
     });
@@ -63,14 +64,14 @@ const handleSelectedPlayer = (player) => {
     const isExist = selectedPlayer.find(previousPlayer => previousPlayer.playerId === player.playerId)
     setFreeCredit(freeCredit - player.biddingPrice);
     
-    if (!isExist){
-      setSelectedPlayer([...selectedPlayer, player])
-      toast.success(`Congrats !! ${player.name} is now in your squad`,{
+     if (!isExist){
+        setSelectedPlayer([...selectedPlayer, player])
+        toast.success(`Congrats !! ${player.name} is now in your squad`,{
         position: "top-center",
         theme: "dark"
       })
     }else {
-      toast.warn('Player already selected',{
+        toast.warn('Player already selected',{
         position: "top-center",
         theme: "dark"
 
@@ -90,12 +91,11 @@ const handleSelectedPlayer = (player) => {
   
 }
 
-
-  const handleIsActiveState = (status) => {
+const handleIsActiveState = (status) => {
     if (status === "available") {
-      setIsActive({
+        setIsActive({
         available: true,
-    status:"available"
+        status:"available"
       })
     }
     else {
@@ -114,15 +114,18 @@ const handleSelectedPlayer = (player) => {
 
       {/* Header  */}
       <Header freeCredit={freeCredit}></Header>
+
       {/* Banner */}
       <Banner handleFreeCredit={handleFreeCredit}></Banner>
     
       {/* Available Players */}
+
       <AvailablePlayers setActiveTab={setActiveTab} handleSelectedPlayer={handleSelectedPlayer} selectedPlayer={selectedPlayer} handleDelete={handleDelete} handleIsActiveState={handleIsActiveState} isActive={isActive}></AvailablePlayers>
       <ToastContainer />
 
 
       {/* Footer  */}
+
       <Footer></Footer>
        
 

@@ -4,6 +4,7 @@ import Cricket from '../../public/image/assets/banner-main.png'
 
 
 
+// eslint-disable-next-line react/prop-types
 const Banner = ({handleFreeCredit}) => {
     return (
         <div className=' relative max-w-7xl mx-auto mt-6   text-white bg-cover'>
