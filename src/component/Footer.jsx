@@ -12,13 +12,13 @@ const Footer = () => {
 
                 {/* Newsletter */}
 
-            <div className='absolute  justify-center text-center  -top-44 left-0 right-0 mx-auto bg-gradient-to-r from-blue-200 to-yellow-200  rounded-lg py-20 shadow-lg max-w-7xl'>
-               <div>
+            <div className='absolute p-5 border border-white rounded-lg text-center -top-44 left-0 right-0 mx-auto  max-w-7xl'>
+               <div className='bg-gradient-to-r from-blue-200 to-yellow-200  rounded-lg py-20 w-full'>
                <h2 className='font-bold text-black text-3xl mb-4 text-center'>Subscribe to our Newsletter</h2>
                 <h4 className='font-medium text-lg text-gray-500 text-center mb-6'>Get the latest updates and news right in your inbox!</h4>
                 <div>
                 <input type="email" placeholder='Enter your email' className='pr-36 pl-4 py-3 bg-gray-100  rounded-lg mr-4' />
-                <button className="btn bg-[#E7FE29]">Subscribe</button>
+                <button className="bg-gradient-to-r from-pink-300 to-yellow-300 text-black font-bold py-3 px-4 rounded-lg transform transition-transform duration-200 hover:scale-105">Subscribe</button>
                 </div>
                </div>
             </div>
@@ -45,7 +45,7 @@ const Footer = () => {
                              type="text"
                              placeholder="Enter your email"
                             className="input input-bordered join-item" />
-                            <button className="btn btn-primary join-item">Subscribe</button>
+                            <button className="bg-gradient-to-r from-pink-300 to-yellow-300 text-black font-bold py-3 px-4 rounded-lg transform transition-transform duration-200 hover:scale-105">Subscribe</button>
                         </div>
                      </fieldset>
                 </form>

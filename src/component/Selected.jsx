@@ -15,11 +15,9 @@ const Selected = ({selectedPlayer, handleDelete, setActiveTab, activeTab}) => {
                             <p className=" text-gray-600 text-sm">${player.biddingPrice}</p>
                             </div>
                             </div>
-                            <i onClick={() => handleDelete(player.playerId)} className="fa-regular fa-trash-can text-red-400"></i>
+                            <button className="cursor-pointer"><i onClick={() => handleDelete(player.playerId)} className="fa-regular fa-trash-can text-red-400"></i></button>
                         </div>
-                
                     ) )
-                    
                 }
             </div>
             <button

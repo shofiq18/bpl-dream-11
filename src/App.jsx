@@ -29,9 +29,11 @@ const handleDelete = (playerId) => {
   
   const remainingPlayer = selectedPlayer.filter((p) => p.playerId != playerId);
   setSelectedPlayer(remainingPlayer);
-  toast.dismiss('Player removed')
- 
-
+  
+  toast.success('Player removed successfully', {
+    position: "top-center",
+    theme: "dark"
+  });
 
 }
 
@@ -40,6 +42,23 @@ const handleSelectedPlayer = (player) => {
 
 
   if(selectedPlayer.length <= 5){
+
+    if (freeCredit === 0) {
+      toast.warn('Your balance is empty', {
+          position: "top-center",
+          theme: "dark"
+      });
+      return;
+  }
+  
+
+  if (freeCredit < player.biddingPrice) {
+    toast.warn('No available balance', {
+        position: "top-center",
+        theme: "dark"
+    });
+    return; 
+}
 
     const isExist = selectedPlayer.find(previousPlayer => previousPlayer.playerId === player.playerId)
     setFreeCredit(freeCredit - player.biddingPrice);
