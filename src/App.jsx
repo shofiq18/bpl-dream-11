@@ -121,6 +121,8 @@ const handleIsActiveState = (status) => {
       {/* Available Players */}
 
       <AvailablePlayers setActiveTab={setActiveTab} handleSelectedPlayer={handleSelectedPlayer} selectedPlayer={selectedPlayer} handleDelete={handleDelete} handleIsActiveState={handleIsActiveState} isActive={isActive}></AvailablePlayers>
+      
+      
       <ToastContainer />
 
 
