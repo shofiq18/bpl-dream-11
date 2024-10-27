@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Selected from "./component/Selected";
 
-const App = () => {
+const App = ({setActiveTab}) => {
   const [isActive, setIsActive] = useState({
     available: true,
     status:"available"
@@ -18,14 +18,20 @@ const [selectedPlayer, setSelectedPlayer] = useState([]);
 const [freeCredit, setFreeCredit] = useState(0);
 
 const handleFreeCredit = (amount) => {
-  setFreeCredit(freeCredit + amount); // Add the amount to freeCredit
-  console.log('Free credit claimed:', amount);
-  toast.success('Sucess')
+  setFreeCredit(freeCredit + amount); 
+  toast.success('Credit added to your account',{
+    position: "top-center",
+        theme: "dark"
+  })
 };
 
 const handleDelete = (playerId) => {
+  
   const remainingPlayer = selectedPlayer.filter((p) => p.playerId != playerId);
   setSelectedPlayer(remainingPlayer);
+  toast.dismiss('Player removed')
+ 
+
 
 }
 
@@ -37,14 +43,29 @@ const handleSelectedPlayer = (player) => {
 
     const isExist = selectedPlayer.find(previousPlayer => previousPlayer.playerId === player.playerId)
     setFreeCredit(freeCredit - player.biddingPrice);
+    
     if (!isExist){
       setSelectedPlayer([...selectedPlayer, player])
+      toast.success(`Congrats !! ${player.name} is now in your squad`,{
+        position: "top-center",
+        theme: "dark"
+      })
     }else {
-      alert (' Player already selected')
+      toast.warn('Player already selected',{
+        position: "top-center",
+        theme: "dark"
+
+      });
+
     }
   }
   else{
-    alert('you have already selected 6 plyers')
+    toast.error('You have already selected 6 players',{
+      position: "top-center",
+        theme: "dark"
+
+    });
+
   }
   
   
@@ -78,7 +99,8 @@ const handleSelectedPlayer = (player) => {
       <Banner handleFreeCredit={handleFreeCredit}></Banner>
     
       {/* Available Players */}
-      <AvailablePlayers handleSelectedPlayer={handleSelectedPlayer} selectedPlayer={selectedPlayer} handleDelete={handleDelete} handleIsActiveState={handleIsActiveState} isActive={isActive}></AvailablePlayers>
+      <AvailablePlayers setActiveTab={setActiveTab} handleSelectedPlayer={handleSelectedPlayer} selectedPlayer={selectedPlayer} handleDelete={handleDelete} handleIsActiveState={handleIsActiveState} isActive={isActive}></AvailablePlayers>
+      <ToastContainer />
 
 
       {/* Footer  */}

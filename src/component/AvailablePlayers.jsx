@@ -24,13 +24,13 @@ const AvailablePlayers = ({handleSelectedPlayer, selectedPlayer, handleDelete}) 
                 <h2 className='text-2xl font-bold'>{activeTab === 0 ? 'Available Players' : `Selected Players (${selectedPlayer.length}/6)`}</h2>
                 <div className="flex gap-3">
                     <button
-                    className={`px-4 py-2 rounded ${activeTab === 0 ? 'bg-blue-500 text-white' : 'button'}`}
+                    className={`px-4 py-2 rounded ${activeTab === 0 ? 'bg-[#E7FE29] text-black' : 'button'}`}
                     onClick={() => setActiveTab(0)}
                     >
                         Available
                     </button>
                     <button
-                    className={`px-4 py-2 rounded ${activeTab === 1 ? 'bg-blue-500 text-white' : 'button'}`}
+                    className={`px-4 py-2 rounded ${activeTab === 1 ? 'bg-[#E7FE29] text-black' : 'button'}`}
                     onClick={() => setActiveTab(1)}
                     >
                     Selected ({selectedPlayer.length})
@@ -83,7 +83,7 @@ const AvailablePlayers = ({handleSelectedPlayer, selectedPlayer, handleDelete}) 
                 
             </div>
                 ) : (
-                    <Selected handleDelete={handleDelete} selectedPlayer={selectedPlayer}/>
+                    <Selected setActiveTab={setActiveTab} activeTab={activeTab} handleDelete={handleDelete} selectedPlayer={selectedPlayer}/>
                 )}
             </div>
         </div>

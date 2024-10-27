@@ -13,12 +13,14 @@ const Footer = () => {
                 {/* Newsletter */}
 
             <div className='absolute  justify-center text-center  -top-44 left-0 right-0 mx-auto bg-gradient-to-r from-blue-200 to-yellow-200  rounded-lg py-20 shadow-lg max-w-7xl'>
-                <h2 className='font-bold text-black text-3xl mb-4 text-center'>Subscribe to our Newsletter</h2>
+               <div>
+               <h2 className='font-bold text-black text-3xl mb-4 text-center'>Subscribe to our Newsletter</h2>
                 <h4 className='font-medium text-lg text-gray-500 text-center mb-6'>Get the latest updates and news right in your inbox!</h4>
                 <div>
                 <input type="email" placeholder='Enter your email' className='pr-36 pl-4 py-3 bg-gray-100  rounded-lg mr-4' />
-                <button className="btn bg-[#E7FE29]">Claim Free Credit</button>
+                <button className="btn bg-[#E7FE29]">Subscribe</button>
                 </div>
+               </div>
             </div>
                 
                 {/* footer */}

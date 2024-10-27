@@ -14,8 +14,10 @@ const Banner = ({handleFreeCredit}) => {
                 <img src={Cricket} alt="" className='mb-6 mx-auto '  />
                 <h2 className=' text-4xl font-bold mb-4 '>Assemble Your Ultimate Dream 11 Cricket Team</h2>
                 <p className='text-2xl font-medium text-gray-400 mb-6 '>Beyond Boundaries Beyond Limits</p>
-                <button onClick={() => handleFreeCredit(2000000)} className="btn bg-[#E7FE29]">Claim Free Credit </button>
-
+                <div className='w-[200px] p-2 border rounded-xl mx-auto flex justify-center items-center h-[64px] border-yellow-400'>
+                    <button onClick={() => handleFreeCredit(2000000)} className="w-[184px] font-semibold rounded-xl text-black h-[48px] bg-[#E7FE29]">Claim Free Credit </button>
+                
+                </div>
             </div>
         </div>
     );
