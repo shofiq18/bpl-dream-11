@@ -29,5 +29,5 @@ BPL-Dream 11 is a fantasy sports platform where users create virtual teams using
 To deploy this project run
 
 ```bash
-  npm run deploy
+  splendid-queen.surge.sh
 ```
