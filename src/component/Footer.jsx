@@ -23,7 +23,7 @@ const Footer = () => {
                </div>
             </div>
                 
-                {/* footer */}
+                {/* footer  section start here */}
                 <nav>
                     <h6 className="footer text-lg font-semibold  text-white">About Us</h6>
                     <p>We are a passionate team <br /> dedicated to providing the best <br /> services to our customers.</p>
